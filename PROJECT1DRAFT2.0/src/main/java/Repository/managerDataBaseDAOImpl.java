@@ -127,10 +127,10 @@ connectionFactory conFact = new connectionFactory();
 		ArrayList<Manager> array = new ArrayList <Manager>();
 		try {
 			Connection connection = conFact.getConnection();
-			String sql = "Select reimbursement_type, approved From reimbursement where R_id =?";
+			String sql = "Select reimbursement_type, approval From reimbursement where reimbursement_id in (select credential_id from employeecredentials e  where username= ?);";
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setString(1, first_name);
-			ps.setString(1, last_name);
+			ps.setString(2, last_name);
 
 			ResultSet rs = ps.executeQuery();
 			
@@ -138,7 +138,7 @@ connectionFactory conFact = new connectionFactory();
 				array.add(new Manager(rs.getString("request_Reimbursement"),//pending,approved,denied
 						rs.getString("reimbursement_Type"),
 						rs.getBoolean("Approved"),
-						rs.getInt("R_id")));
+						rs.getInt("reimbursement_id")));
 			}
 		} catch (SQLException e) {
 			
