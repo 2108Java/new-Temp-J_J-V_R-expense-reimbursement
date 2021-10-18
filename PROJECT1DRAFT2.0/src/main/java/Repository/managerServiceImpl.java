@@ -11,6 +11,10 @@ public managerServiceImpl(managerDataBaseDAO data) {
 	this.data= data;
 }
 
+	public managerServiceImpl() {
+	// TODO Auto-generated constructor stub
+}
+
 	public ArrayList <Manager> selectAccount(String first_name, String last_name) {
 		return data.selectAccount(first_name,last_name);
 	}

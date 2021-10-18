@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title>Reimbursement Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <!--<link rel = "stylesheet" href = "reimbLoginStyle.css">-->
+    </head>
+    <body style="background: rgb(169, 216, 218);">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">J&R</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                </li>
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>-->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Action
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Submit reimburement request</a><!--Add link in href after adding to java file-->
+                    <a class="dropdown-item" href="#">View all reimburement requests</a><!--Add link in href after adding to java file-->
+                    <a class="dropdown-item" href="#">Reset password</a><!--Add link in href after adding to java file-->
+                    <!--<div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">View all requests</a>-->
+                  </div>
+                </li>
+               
+            </div>
+          </nav>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Pending
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Approved
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Rejected
+            </label>
+          </div>
+          
+          <div>
+            <button type="button" class="btn btn-dark">Submit</button>
+            </div>
+            <p>Reimburesement List</p>
+  
+            <div>
+  
+            <table class="table table-dark table-hover" style= "width: 75%" id = "reimbList">
+              <thead>
+                <tr>
+                  <!--<th scope="col" style= "width: 5%">#</th>-->
+                  <th scope="col" style= "width: 15%">Request date</th>
+                  <th scope="col" style= "width: 15%">Reimbursement Type</th>
+                  <th scope="col" style= "width: 15%">Amount</th>
+                  <th scope="col">Description</th>
+                  <th scope="col" style= "width: 15%">Approval</th>
+                  <th scope="col" style= "width: 15%">Approval Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--<tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>-->
+              </tbody>
+            </table>
+            </div>
+
+
+          
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+        <script src="employeeRequest.js"></script>
+      </body>
+</html>

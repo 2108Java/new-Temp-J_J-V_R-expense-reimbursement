@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title>Reimbursement Login</title>
+        <link rel = "stylesheet" href = "reimbLoginStyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body style="background: rgb(169, 216, 218);">
+        <div class = "form-box">
+            <!--<p>J&R</p>-->
+            
+        <form class= "user-input" method="POST" onsubmit="manlogin_submit_form()">
+            <h1 id = "form-title">J&R</h1>
+            <div class = "form-input-message">Enter username</div>
+            <input type = "text" class = "input-field" id = "man-username-login" autofocus placeholder = "Username" required>
+            <!--<div class = "error-message">Enter valid input</div>-->
+            <div class = "form-input-message">Enter password</div>
+            <input type = "text" class = "input-field" id = "man-password-login" autofocus placeholder = "Password" required>
+            <!--<div class = "error-message">Enter valid input</div>-->
+            <div class = "form-input-message">Enter title</div>
+            <input type = "text" class = "input-field" id = "man-password-login" autofocus placeholder = "Finance Manager or Employee" required>
+            <button type="button" class="btn btn-dark" id="man-login-button">Submit</button>
+            <!--<button type="submit" class="form-btn" id="Login-btn">Login</button>-->
+            <!--<p class = "option-message">
+                <a href = "C:\Users\janet\RevatureMaterials\My projects\Project 1\Forgot password.html" class = "form-link">Forgot your password?</a>
+            </p>-->
+            <p class = "option-message">
+                <a href = "C:/Users/janet/RevatureMaterials/My%20projects/Project%201/Create%20Account.html" class = "form-link">Create new account</a>
+            </p><!--Change the href link-->
+        </form>
+        
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="loginScript.js"></script>
+    </body>
+</html>

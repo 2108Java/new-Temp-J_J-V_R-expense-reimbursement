@@ -11,6 +11,9 @@ public class authenticationImpl implements authenticationService {
 	public authenticationImpl(managerDataBaseDAO dataM) {
 		this.dataM= dataM;
 	}
+	public authenticationImpl() {
+		// TODO Auto-generated constructor stub
+	}
 	public boolean employeeLogIn(String username, String password) {
 		return data.selectUser(username,password);
 

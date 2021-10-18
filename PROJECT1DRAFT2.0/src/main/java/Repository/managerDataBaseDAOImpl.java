@@ -127,10 +127,10 @@ connectionFactory conFact = new connectionFactory();
 		ArrayList<Manager> array = new ArrayList <Manager>();
 		try {
 			Connection connection = conFact.getConnection();
-			String sql = "Select reimbursement_type, approved From reimbursement where R_id =?";
+			String sql = "Select reimbursement_type, approved From reimbursement where reimbursement_id =?";
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setString(1, first_name);
-			ps.setString(1, last_name);
+			ps.setString(2, last_name);
 
 			ResultSet rs = ps.executeQuery();
 			

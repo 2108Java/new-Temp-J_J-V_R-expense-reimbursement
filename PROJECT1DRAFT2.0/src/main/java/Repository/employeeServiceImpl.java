@@ -3,6 +3,7 @@ package Repository;
 import java.util.ArrayList;
 
 import Models.Employee;
+import Models.Reimburse;
 import Service.employeeService;
 
 public class employeeServiceImpl implements employeeService {
@@ -10,6 +11,10 @@ public class employeeServiceImpl implements employeeService {
 	employeeDataBaseDAO data;
 public employeeServiceImpl(employeeDataBaseDAO data) {
 	this.data= data;
+}
+
+	public employeeServiceImpl() {
+	// TODO Auto-generated constructor stub
 }
 
 	public ArrayList <Employee> selectAccount(String first_name, String last_name) {
@@ -23,7 +28,7 @@ public employeeServiceImpl(employeeDataBaseDAO data) {
 
 
 
-	public ArrayList<Employee> selectReimbursementStatus(String first_name, String last_name,int id) {
+	public ArrayList<Reimburse> selectReimbursementStatus(String first_name, String last_name,int id) {
 		return data.selectReimbursementStatus(first_name,  last_name, id);
 	}
 
